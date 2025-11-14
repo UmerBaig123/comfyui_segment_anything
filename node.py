@@ -321,7 +321,7 @@ class GroundingDinoSAMSegment:
                 threshold
             )
             if boxes.shape[0] == 0:
-                h, w = pil.size[1], pil.size[0]
+                h, w = item.size[1], item.size[0]
                 zero_mask = torch.zeros((1, h, w), dtype=torch.float32)
                 res_masks.append(zero_mask)
                 continue
